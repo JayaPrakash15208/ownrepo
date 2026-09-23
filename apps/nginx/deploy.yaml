@@ -24,6 +24,7 @@ metadata:
   labels:
     app: web-app
   name: web-app
+  namespace: default
 spec:
   replicas: 2
   selector:
