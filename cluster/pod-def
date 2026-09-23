@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
   name: hello-app-v2
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: hello-app-v2
@@ -20,6 +20,7 @@ spec:
             - "-text=Hello v2!"
           ports:
             - containerPort: 5678
+#pod created
 ---
 apiVersion: v1
 kind: Service
