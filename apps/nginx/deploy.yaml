@@ -14,3 +14,30 @@ spec:
   dnsPolicy: ClusterFirst
   restartPolicy: Always
 status: {}
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: web-app
+  name: web-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: web-app
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: web-app
+    spec:
+      containers:
+      - image: nginx
+        name: nginx
+        resources: {}
+status: {}
